@@ -19,3 +19,4 @@ time.table.*
 *.patch
 *.log
 LB.txt
+*.pyc
