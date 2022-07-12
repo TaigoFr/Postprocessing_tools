@@ -15,14 +15,14 @@ class IntegrationMethod:
 
 
     # Checks that this integration method is suitable given the number of points and periodicity
-    def is_valid(num_points, is_periodic):
+    def isValid(self, num_points, is_periodic):
         if self.is_closed and not is_periodic:
             return (num_points % self.num_weights == 1 or self.num_weights == 1);
         else:
             return (num_points % self.num_weights == 0);
 
     # Returns the weight for a point with given index
-    def weight(index, total_points, is_periodic):
+    def weight(self, index, total_points, is_periodic):
         weight_index = index % self.num_weights;
         endpoint = (index == 0 or index == total_points - 1) and not is_periodic;
         # if this is a closed formula, not a geometry endpoint but at the edge

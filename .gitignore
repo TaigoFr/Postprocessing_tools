@@ -20,3 +20,5 @@ time.table.*
 *.log
 LB.txt
 *.pyc
+
+*.png
